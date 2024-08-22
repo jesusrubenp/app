@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Videos</title>
+</head>
+<body>
+    <h1>Lista de Videos</h1>
+    <ul>
+        {% for video in videos %}
+            <li>
+                <a href="{% url 'video_detail' video.id %}">{{ video.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'home' %}">Volver a la página de inicio</a></p>
+</body>
+</html>

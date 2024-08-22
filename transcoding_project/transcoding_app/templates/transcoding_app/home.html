@@ -1,0 +1,17 @@
+<!-- transcoding_app/templates/transcoding_app/home.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'transcoding_app/styles.css' %}">
+</head>
+<body>
+    <h1>Bienvenido a la Plataforma de Videos</h1>
+    <p><a href="{% url 'upload_video' %}">Subir un video</a></p>
+    <p><a href="{% url 'video_list' %}">Ver todos los videos</a></p>
+</body>
+</html

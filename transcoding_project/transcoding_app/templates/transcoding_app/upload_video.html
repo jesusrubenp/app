@@ -1,0 +1,33 @@
+<!-- transcoding_app/templates/transcoding_app/upload_video.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Video</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'transcoding_app/styles.css' %}">
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Subir Video</h1>
+        <div class="upload-box">
+            <p>Arrastra y suelta un archivo de video</p>
+            <p>o</p>
+            <label for="file-upload" class="custom-file-upload">
+                Selecciona un archivo de video
+            </label>
+            <input id="file-upload" type="file" name="file" accept="video/*">
+        </div>
+        <form method="post" enctype="multipart/form-data">  <!-- Asegúrate de usar enctype -->
+            {% csrf_token %}
+            {{ form.title.label_tag }}
+            {{ form.title }}
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            {{ form.file }}  <!-- Asegúrate de que el campo de archivo esté en el formulario -->
+            <button type="submit" class="upload-button">Subir Video</button>
+        </form>
+    </div>
+</body>
+</html>

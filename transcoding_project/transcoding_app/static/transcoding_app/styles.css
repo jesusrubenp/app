@@ -1,0 +1,106 @@
+
+
+body {
+    background-color: #415A77;  
+    color: #E0E1DD;  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.upload-container {
+    background-color: #0D1B2A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #E0E1DD;
+}
+
+p {
+    color: #778DA9;  
+}
+
+
+a {
+    color: #0D1B2A; 
+    text-decoration: none;
+    background-color: transparent; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid #778DA9;  
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #415A77;  
+    color: #E0E1DD; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+    transform: translateY(-2px);  
+}
+
+.upload-box {
+    border: 2px dashed #778DA9;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #778DA9;
+    color: #0D1B2A;
+    margin-bottom: 20px;
+}
+
+.upload-box p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #0D1B2A;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #415A77;
+    color: #E0E1DD;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #778DA9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"] {
+    display: none;  /* Esconder el input de archivo */
+}
+
+.upload-button {
+    padding: 10px 20px;
+    background-color: #415A77;
+    color: #E0E1DD;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #778DA9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin-top: 20px;
+}
